@@ -6,6 +6,8 @@
     http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    <context:property-placeholder location="classpath:TrackCoach.properties"/>
 
 	<!-- Define your beans here -->
 	<bean id="myFortune"
@@ -17,6 +19,13 @@
 	<bean id="myCricketCoach"
 		class="com.luv2code.springdemo.CricketCoach">
 		<property name="fortuneService" ref="myFortune"></property>
+		<property name="emailAddress"
+			value="ashutosh.shriansh@ibm.com"></property>
+		<property name="team" value="IBM-GBS,NOIDA,SECTOR-62"></property>
+	</bean>
+	<bean id="myTrackCoach" class="com.luv2code.springdemo.TrackCoach">
+		<property name="phoneNumber" value="${foo.phoneNumber}"></property>
+		<property name="email" value="${foo.email}"></property>
 	</bean>
 
 </beans>
