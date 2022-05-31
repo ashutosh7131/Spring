@@ -4,6 +4,10 @@ public class BaseballCoach implements Coach {
 
 	private FortuneService fortuneService;
 
+	public BaseballCoach() {
+		super();
+	}
+
 	public BaseballCoach(FortuneService theFortuneService) {
 		super();
 		this.fortuneService = theFortuneService;
