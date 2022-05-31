@@ -1,0 +1,22 @@
+package com.luv2code.springdemo;
+
+public class CricketCoach implements Coach {
+
+	private FortuneService fortuneService;
+
+	public void setFortuneService(FortuneService fortuneService) {
+		this.fortuneService = fortuneService;
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		return "Spend 30 minutes on Batting Practice";
+	}
+
+	@Override
+	public String getDailyFortune() {
+
+		return fortuneService.getFortune();
+	}
+
+}
