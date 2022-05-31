@@ -4,6 +4,16 @@ public class TrackCoach implements Coach {
 
 	private String phoneNumber;
 	private String email;
+	private HappyFortuneService fortuneService;
+
+	public TrackCoach() {
+		super();
+	}
+
+	public TrackCoach(HappyFortuneService theFortuneService) {
+		super();
+		this.fortuneService = theFortuneService;
+	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -28,7 +38,15 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		return "You had a bad day today!!!!";
+		return fortuneService.getFortune();
+	}
+	
+	public void doMyStartUpStuff() {
+		System.out.println("TrackCoach: inside method doMyStartUpStuff");
+	}
+	
+	public void doMyCleanUpYoYo() {
+		System.out.println("TrackCoach: inside method doMyCleanUpYoYo");
 	}
 
 }
