@@ -15,9 +15,6 @@
 	<bean id="myCoach" class="com.luv2code.springdemo.BaseballCoach">
 		<constructor-arg ref="myFortune"></constructor-arg>
 	</bean>
-	<bean id="myCoachNew" class="com.luv2code.springdemo.BaseballCoach" scope="prototype">
-		<constructor-arg ref="myFortune"></constructor-arg>
-	</bean>
 
 </beans>
 

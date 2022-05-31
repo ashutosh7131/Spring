@@ -16,12 +16,8 @@ public class BeanScopeDemoApp {
         System.out.println(result);
 		System.out.println("================================");
 		System.out.println(resultNew);
-		System.out.println("================================");
 		System.out.println("coach : " + coach);
 		System.out.println("alphaCoach : " + alphaCoach);
-		System.out.println("================================");
-		System.out.println("coachNew : " + coachNew);
-		System.out.println("alphaCoachNew : " + alphaCoachNew);
 		context.close();
 
 	}
