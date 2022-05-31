@@ -11,6 +11,8 @@ public class BeanScopeDemoApp {
 		Coach alphaCoach = context.getBean("myCoach", BaseballCoach.class);
 		boolean result = (coach == alphaCoach);
 		System.out.println(result);
+		System.out.println("coach : " + coach);
+		System.out.println("alphaCoach : " + alphaCoach);
 		context.close();
 
 	}
